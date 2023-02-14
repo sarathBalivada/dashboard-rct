@@ -31,7 +31,9 @@ import { useStateContext } from "./contexts/ContextProvider";
 
 const App = () => {
   const { activeMenu } = useStateContext();
+
   return (
+
     <div>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
@@ -63,7 +65,7 @@ const App = () => {
             <div className="fixed md:static bg-main-bg  dark:bg-main-dark-bg navbar w-full">
               <Navbar />
             </div>
-          </div>
+         
           <div>
             <Routes>
               {/* Dashboard */}
@@ -88,6 +90,7 @@ const App = () => {
               <Route path="/pyramid" element={<Pyramid />} />{" "}
               <Route path="/stacked" element={<Stacked />} />{" "}
             </Routes>
+          </div>
           </div>
         </div>
       </BrowserRouter>
